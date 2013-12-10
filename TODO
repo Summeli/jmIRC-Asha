@@ -1,0 +1,9 @@
+todo:
+
+REVIEW NICKSERV PATCHES!
+
+fix nullpointerexception
+autorun in favourites
+finish the parser (who replies)
+don't open channel window on join if banned from there
+disconnect confirms are you sure
