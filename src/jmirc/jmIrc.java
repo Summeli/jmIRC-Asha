@@ -94,7 +94,7 @@ public class jmIrc extends MIDlet implements CommandListener {
 		if ("".equals(selprofile))
 			selprofile = "Default";
 
-		mainList = new List("jmIRC 1.0",List.IMPLICIT);
+		mainList = new List(versionInfo,List.IMPLICIT);
 		mainList.append("Connect to: " + selprofile, null);
 		mainList.append("Profiles", null);
 		mainList.append("Advanced", null);
@@ -346,18 +346,10 @@ public class jmIrc extends MIDlet implements CommandListener {
 				else if (db.encoding.equals("Windows-1251")) cg_encoding.setSelectedIndex(4, true);
 				else if (db.encoding.equals("Windows-1255")) cg_encoding.setSelectedIndex(5, true);
 				else cg_encoding.setSelectedIndex(0, true);
-/*
-                                cg_connectionmode = new ChoiceGroup("Connection mode", ChoiceGroup.EXCLUSIVE);
-                                cg_connectionmode.append("Default", null);
-                                cg_connectionmode.append("BlackBerry", null);
-                                cg_connectionmode.append("BlackBerry MDS", null);
-                                cg_connectionmode.append("BlackBerry WiFi", null);
-                                cg_connectionmode.setSelectedIndex(db.connectionmode, true);
-*/
+
 				cfgform = new Form("Advanced Config");
 				cfgform.append(cg_misc);
 				cfgform.append(cg_encoding);
-                                //cfgform.append(cg_connectionmode);
 				currentform = FORM_ADVANCED;
 			}
 			else if (cmd == cmd_interface || item == "Interface") {
@@ -518,16 +510,16 @@ public class jmIrc extends MIDlet implements CommandListener {
 	}
 	
 	public void showInstructionForm(){
-		showMessage( versionInfo,"Flip gestures are supported in the irc-windows \n" +
-					"Flip up: scroll text up \n"+
-					"Flip down: scroll text down \n"+
-					"Flip right: switch to the next window \n"+
-					"Flip left:  switch to the previous window \n\n"+
+		showMessage( versionInfo,"Flick gestures are supported in the irc-windows \n" +
+					"Flick down: scroll text up \n"+
+					"Flick up: scroll text down \n"+
+					"Flick right: switch to the next window \n"+
+					"Flick left:  switch to the previous window \n\n"+
 					"Share profiles: Long press a profile to share it\n"
                );
 	}
 	public void showAboutForm(){
-		showMessage( versionInfo,"for S40 and Nokia Asha \n" +
+		showMessage( versionInfo,"for Nokia Asha \n" +
                 "by: Antti Pohjola, summeli@summeli.fi \nhttp://www.summeli.fi\n"+
                 "jmIRC is licenced under GPLv2 licence \n" +
                 "You can get the source code from: http://github.com/Summeli/jmIRC-Asha \n\n"+
