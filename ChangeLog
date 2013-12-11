@@ -1,6 +1,9 @@
-Version 0.96
+Version 1.0
 ------------
-
+2013-12-11 Antti Pohjola
+   * Increased the version number into 1.0, just because I can
+   * Asha UI refresh. Minor tweaking for touch screen devices Flick gestures etc. 
+   
 2010-01-17  Juho Vähä-Herttua
    * Fix RPL_TOPICWHOTIME for some servers
    * Fix a possible exception in Utils.trim() (thanks to Federico)
